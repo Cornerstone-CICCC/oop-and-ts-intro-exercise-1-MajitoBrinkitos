@@ -13,6 +13,12 @@ class Car {
   getCarInfo() {
     console.log(`The car's profile is: ${this.make}, ${this.model}, ${this.year}`);
   }
+
+  setYear(newYear) :function() {
+    return new Date().getFullYear {
+      if ()
+    }
+  }
 }
 
 
