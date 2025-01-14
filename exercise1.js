@@ -4,6 +4,15 @@
 
 class Car {
   // YOUR CODE HERE
+  constructor(make, model, year) {
+    this.make = make;
+    this.model = model;
+    this.year = year;
+  }
+
+  getCarInfo() {
+    console.log(`The car's profile is: ${this.make}, ${this.model}, ${this.year}`);
+  }
 }
 
 
