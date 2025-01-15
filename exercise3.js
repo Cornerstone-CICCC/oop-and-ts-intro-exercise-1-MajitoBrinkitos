@@ -6,6 +6,19 @@
 
 class Book {
   // YOUR CODE HERE
+  #title;
+  #author;
+  #price;
+
+  constructor (title, author, price) {
+    this.#title = title;
+    this.#author = author;
+    this.#price = price;
+  }
+
+  getBookInfo() {
+    return(`The book's data is: ${this.#title}, ${this.#author}, ${this.#price}`);
+  }
 }
 
 
