@@ -17,7 +17,33 @@ class Book {
   }
 
   getBookInfo() {
-    return(`The book's data is: ${this.#title}, ${this.#author}, ${this.#price}`);
+    return `The book's data is: ${this.#title}, ${this.#author}, ${this.#price}`;
+  }
+
+  get title() {
+    return this.#title;
+  }
+
+  get price() {
+    return this.#price;
+  }
+
+  set title(newTitle) {
+    if(newTitle.trim() !== '') {
+      this.#title = newTitle;
+    } else {
+      console.log("No title");
+    }
+  }
+
+  //Method Add Discount
+  addDiscount(percentage) {
+    if(percentage > 0){
+      this.#price = this.#price - (this.#price * (percentage / 100));
+      console.log(`New price is: ${this.#price}`);
+    } else {
+      console.log("No discount for this title");
+    }
   }
 }
 
@@ -34,4 +60,4 @@ book1.title = ""; // Should not change the title
 console.log(book1.title); // Expected output: "JavaScript Basics"
 
 book1.title = "Advanced JavaScript"; // Should update the title
-console.log(book1.title); // Expected output: "Advanced JavaScript"
+console.log(book1.title); // Expected output: "Advanced JavaScript" */
