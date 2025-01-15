@@ -4,27 +4,32 @@
 
 class Car {
   // YOUR CODE HERE
+  #make;
+  #model;
+  #year;
+
+
   constructor(make, model, year) {
-    this.make = make;
-    this.model = model;
-    this.year = year;
+    this.#make = make;
+    this.#model = model;
+    this.#year = year;
   }
 
   getYear() { 
-    return this.year; 
+    return this.#year; 
   }
 
   getCarInfo() {
-    return(`The car's profile is: ${this.make}, ${this.model}, ${this.year}`);
+    return(`The car's profile is: ${this.#make}, ${this.#model}, ${this.#year}`);
   }
 
   setYear(newYear) {
 
-    if(newYear >= this.year) {
-      this.year = newYear;
+    if(newYear >= this.#year) {
+      this.#year = newYear;
       console.log(`The year has been updated to ${newYear}.`);
     } else {
-      console.log(`The new year couldn't be updated (${this.year}).`);
+      console.log(`The new year couldn't be updated (${this.#year}).`);
     }
 }
 }

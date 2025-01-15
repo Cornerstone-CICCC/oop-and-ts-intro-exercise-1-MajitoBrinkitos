@@ -7,6 +7,7 @@
 
 class BankAccount {
   // YOUR CODE HERE
+  accountNumber
 }
 
 
