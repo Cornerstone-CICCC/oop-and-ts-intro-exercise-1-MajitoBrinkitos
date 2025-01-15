@@ -7,7 +7,18 @@
 
 class BankAccount {
   // YOUR CODE HERE
-  accountNumber
+  constructor (accountNumber, balance) {
+    this.accountNumber = accountNumber;
+    this.balance = balance;
+  }
+
+  getAccountNumber() {
+    return this.accountNumber;
+  }
+
+  getBalance() {
+    return this.balance;
+  }
 }
 
 
