@@ -19,7 +19,33 @@ class BankAccount {
   getBalance() {
     return this.balance;
   }
-}
+
+  //Deposit Method
+  deposit(amount){
+    if(amount > 0) {
+      this.balance += amount;
+      console.log(`Deposit successful. New balance: ${this.balance}.`);
+    }else {
+      console.log(`Deposit not successful.`);
+    }
+  }
+
+  //Withdraw Method
+  withdraw(amount){
+    if(amount > 0 && amount <= this.balance){
+      this.balance -= amount;
+      console.log(`Withdraw successful. New balance: ${this.balance}.`);
+        }else {
+      console.log(`Withdraw not successful.`);
+      }
+    }
+
+    //Static Method
+    static compareAccounts(account1, account2) {
+      return account1.getBalance() > account2.getBalance() ? account1 : account2;
+    }
+  }
+
 
 
 // TEST CASE / DRIVER CODE
